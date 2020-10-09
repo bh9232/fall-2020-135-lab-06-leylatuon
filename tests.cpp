@@ -15,7 +15,15 @@ TEST_CASE("Caesar Cipher")
 TEST_CASE("Vigenere Cipher")
 {
     CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "CAKE")=="Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.");
-    CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "cake")=="Vho uwimo dryap fyb luwtu ofit 13 lkda dyku."
-    CHECK(encryptVigenere("Goldilocks & the 3 Bears.", "apples")=="Gdaomdorzd & xze 3 Qtlvk."
-    CHECK(encryptVigenere("Goldilocks & the 3 Bears.", "APPLES")=="Gdaomdorzd & xze 3 Qtlvk."
+    CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "cake")=="Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.");
+    CHECK(encryptVigenere("Goldilocks & the 3 Bears.", "apples")=="Gdaomdorzd & xze 3 Qtlvk.");
+    CHECK(encryptVigenere("Goldilocks & the 3 Bears.", "APPLES")=="Gdaomdorzd & xze 3 Qtlvk.");
+}
+
+TEST_CASE("Decrypt Ciphers")
+{
+    CHECK(decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "CAKE")=="The quick brown fox jumps over 13 lazy dogs.");
+    CHECK(decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "cake")=="The quick brown fox jumps over 13 lazy dogs.");
+    CHECK(decryptCaesar("Cqn zdrlt kaxfw oxg sdvyb xena 13 ujih mxpb.", 555)=="The quick brown fox jumps over 13 lazy dogs.");
+    CHECK(decryptCaesar("Iwt fjxrz qgdlc udm yjbeh dktg 13 apon sdvh.", -999)=="The quick brown fox jumps over 13 lazy dogs.");
 }
