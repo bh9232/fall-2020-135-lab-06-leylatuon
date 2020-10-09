@@ -17,6 +17,10 @@ string decryptVigenere(string ciphertext, string keyword)
     char chartemp; //character of keyword
     string result="";
     int keywordat;
+    if (keyword=="")
+    {
+        return ciphertext;
+    }
     for(int i=0;i<ciphertext.length();i++)
     {
         if(isalpha(ciphertext[i]))

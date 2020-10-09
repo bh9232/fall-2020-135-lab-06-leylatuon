@@ -14,5 +14,6 @@ int main()
     cout<<encryptCaesar("Hello, World!", 10)<<endl<<endl;
     cout<<encryptVigenere("Hello, World!", "cake")<<endl<<endl;
     cout<<decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "CAKE")<<endl<<endl;
+    cout<<decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "")<<endl<<endl;
     return 0;
 }
