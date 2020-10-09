@@ -13,6 +13,10 @@ string encryptVigenere(string plaintext, string keyword)
     char chartemp; //character of keyword
     string result="";
     int keywordat;
+    if (keyword=="")
+    {
+        return plaintext;
+    }
     for(int i=0;i<plaintext.length();i++)
     {
         if(isalpha(plaintext[i]))

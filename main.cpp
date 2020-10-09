@@ -12,7 +12,7 @@ int main()
     test_ascii("Cat :3 Dog");
     cout<<endl;
     cout<<encryptCaesar("Hello, World!", 10)<<endl<<endl;
-    cout<<encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "CAKE")<<endl<<endl;
+    cout<<encryptVigenere("Hello, World!", "cake")<<endl<<endl;
     cout<<decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "CAKE")<<endl<<endl;
     return 0;
 }

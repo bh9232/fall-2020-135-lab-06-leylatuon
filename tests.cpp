@@ -16,8 +16,8 @@ TEST_CASE("Vigenere Cipher")
 {
     CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "CAKE")=="Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.");
     CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "cake")=="Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.");
-    CHECK(encryptVigenere("Goldilocks & the 3 Bears.", "apples")=="Gdaomdorzd & xze 3 Qtlvk.");
-    CHECK(encryptVigenere("Goldilocks & the 3 Bears.", "APPLES")=="Gdaomdorzd & xze 3 Qtlvk.");
+    CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "j")=="Cqn zdrlt kaxfw oxg sdvyb xena 13 ujih mxpb.");
+    CHECK(encryptVigenere("The quick brown fox jumps over 13 lazy dogs.", "")=="The quick brown fox jumps over 13 lazy dogs.");
 }
 
 TEST_CASE("Decrypt Ciphers")
