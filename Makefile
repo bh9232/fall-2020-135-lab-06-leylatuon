@@ -1,9 +1,8 @@
-
-
 main: main.o funcs.o caesar.o vigenere.o decrypt.o
 	g++ -o main main.o funcs.o caesar.o vigenere.o decrypt.o
-tests: tests.o 
-	g++ -o tests tests.o 
+
+tests: tests.o funcs.o caesar.o vigenere.o decrypt.o
+	g++ -o tests tests.o funcs.o caesar.o vigenere.o decrypt.o
 
 funcs.o: funcs.cpp funcs.h
 
@@ -15,11 +14,10 @@ vigenere.o: vigenere.cpp vigenere.h caesar.o
 
 decrypt.o: decrypt.cpp decrypt.h caesar.o vigenere.o
 
-tests.o: tests.cpp  doctest.h
+tests.o: tests.cpp doctest.h funcs.h caesar.h vigenere.h decrypt.h
 
 clean:
 	rm -f main.o tests.o funcs.o caesar.o vigenere.o decrypt.o
-
 help:
 	@echo  make main : make executable named main
 	@echo make tests : make test suite named tests
