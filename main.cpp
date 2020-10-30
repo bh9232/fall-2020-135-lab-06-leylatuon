@@ -3,6 +3,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 using std::cout;
 using std::endl;
@@ -15,5 +16,6 @@ int main()
     cout<<encryptVigenere("Hello, World!", "cake")<<endl<<endl;
     cout<<decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "CAKE")<<endl<<endl;
     cout<<decryptVigenere("Vho uwimo dryap fyb luwtu ofit 13 lkda dyku.", "")<<endl<<endl;
+    cout<<decodeCaesar("Pm ol ohk hufaopun jvumpkluaphs av zhf, ol dyval pa pu jpwoly.")<<endl;
     return 0;
 }

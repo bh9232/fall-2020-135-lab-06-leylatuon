@@ -4,6 +4,7 @@
 #include "caesar.h"
 #include "vigenere.h"
 #include "decrypt.h"
+#include "decode.h"
 
 TEST_CASE("Caesar Cipher")
 {
@@ -29,3 +30,12 @@ TEST_CASE("Decrypt Ciphers")
     CHECK(decryptCaesar("Cqn zdrlt kaxfw oxg sdvyb xena 13 ujih mxpb.", 555)=="The quick brown fox jumps over 13 lazy dogs.");
     CHECK(decryptCaesar("Iwt fjxrz qgdlc udm yjbeh dktg 13 apon sdvh.", -999)=="The quick brown fox jumps over 13 lazy dogs.");
 }
+
+TEST_CASE("Decode with Frequency")
+{
+    CHECK(decodeCaesar("K nyelvo bksxlyg sc k zroxywoxyx yp yzdsmc")=="A double rainbow is a phenomenon of optics");
+    CHECK(decodeCaesar("Hpphmf dispnf jt tjnqmz uif tvqfsjps cspxtfs.")=="Google chrome is simply the superior browser.");
+    CHECK(decodeCaesar("J ibwf b dbmdvmvt fybn upnnpspx vogpsuvobufmz cvu mvdljmz J tuvejfe.")=="I have a calculus exam tommorow unfortunately but luckily I studied.");
+    CHECK(decodeCaesar("Hm dmfkhrg bkzrr H kdzqmdc sgzs Bzdrzq nmbd rzhc 'ds st aqtsd'.")=="In english class I learned that Caesar once said 'et tu brute'.");
+}
+
