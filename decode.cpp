@@ -62,7 +62,7 @@ string decodeCaesar(string encoded)
 
         for(int l=0;l<26;l++)
         {
-            tempdist+=pow(tempfreq[l]-frequencies[l],2);
+            tempdist+=pow(tempfreq[l]-frequencies[l],2);//apply formula for minimal total square error/distance 
         }
     stringdists[i]=tempdist;
     //cout<<stringdists[i];
@@ -70,7 +70,7 @@ string decodeCaesar(string encoded)
     int indexSmallest=0;
     for(int u=1;u<26;u++)
     {
-        if(stringdists[u]<stringdists[indexSmallest])
+        if(stringdists[u]<stringdists[indexSmallest])//find smallest distance
         {
             indexSmallest=u;
         }

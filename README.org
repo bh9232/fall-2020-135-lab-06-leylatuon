@@ -7,7 +7,9 @@
 * GitHub username: leylatuon
 
 * Notes:
-
+- I'm not sure if I used the distance formula correctly, I referenced the following website for the formula
+https://math.libretexts.org/Under_Construction/Book%3A_Yet_Another_Introductory_Number_Theory_Textbook_-_Cryptology_Emphasis_(Poritz)/04%3A_Cryptology/4.03%3A_Frequency_Analysis
+- It still seems to work with most long sentences but it's harder with shorter sentences.
 
   
 * General instructions:
