@@ -26,17 +26,20 @@ string decodeCaesar(string encoded)
     string tempstr="";
     double tempdist=0;
     double alphacount=0;//counts alpha chars make sure not to divide by total chars including spaces/symbols
+
     for(int i=0;i<26;i++)//indexes through 26 sentence rotations
     {
         alphacount=0;
         tempdist=0;
+
         for(int o=0;o<26;o++)
         {
             tempocc[o]=0; //need to reset tempocc array
         }
         strings[i]=decryptCaesar(encoded,i);
         tempstr=strings[i];
-       //cout<<tempstr<<endl;
+        //cout<<tempstr<<endl;
+
         for(int j=0;j<strings[i].length();j++) //parse through each char in current sentence
         {
             if(isalpha(tempstr.at(j)))
@@ -52,8 +55,8 @@ string decodeCaesar(string encoded)
                 }
                 alphacount++;
             }
-
         }
+
         for(int k=0;k<26;k++)
         {
             tempfreq[k]=tempocc[k]/alphacount;//divide occurances by total alpha chars
@@ -64,10 +67,12 @@ string decodeCaesar(string encoded)
         {
             tempdist+=pow(tempfreq[l]-frequencies[l],2);//apply formula for minimal total square error/distance 
         }
-    stringdists[i]=tempdist;
-    //cout<<stringdists[i];
+        stringdists[i]=tempdist;
+        //cout<<stringdists[i];
     }
+
     int indexSmallest=0;
+
     for(int u=1;u<26;u++)
     {
         if(stringdists[u]<stringdists[indexSmallest])//find smallest distance
